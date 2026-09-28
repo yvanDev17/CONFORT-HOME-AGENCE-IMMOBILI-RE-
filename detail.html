@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du bien | CONFORT HOME</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+    <div class="container nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <span class="logo-blue">CONFORT</span> 
+            <span class="logo-yellow">HOME</span>
+        </a>
+
+        <!-- Menu de navigation (Liens + Sélecteur de langue) -->
+        <nav class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav-accueil">Accueil</a></li>
+                <li><a href="biens.html" data-i18n="nav-biens">Nos Biens</a></li>
+                <li><a href="A propos.html" data-i18n="nav-apropos">À Propos</a></li>
+                <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+
+            <div class="lang-container">
+                <button id="btn-fr" class="btn-lang active">FR</button>
+                <button id="btn-en" class="btn-lang">EN</button>
+            </div>
+        </nav>
+
+        <!-- Actions de droite (Téléphone + Bouton Hamburger) -->
+        <div class="nav-actions">
+            <a href="tel:+2250709085268" class="btn btn-phone" title="Appeler l'agence">
+                <i class="fas fa-phone-alt"></i>
+                <span class="phone-text">+225 07 09 08 52 68</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Menu Mobile">
+    <i class="fas fa-bars"></i>
+</button>
+        </div>
+    </div>
+</header>
+
+    <!-- BREADCRUMB -->
+    <div style="background: #f1f5f9; padding: 15px 0; border-bottom: 1px solid #e2e8f0;">
+        <div class="container" style="font-size: 0.88rem; color: var(--text-muted);">
+            <a href="index.html" style="color: var(--primary-blue);">Accueil</a> &nbsp;/&nbsp; 
+            <a href="biens.html" style="color: var(--primary-blue);">Nos Biens</a> &nbsp;/&nbsp; 
+            <span id="breadcrumb-titre">Chargement...</span>
+        </div>
+    </div>
+
+    <!-- SECTION DETAILS -->
+    <section class="section" style="padding-top: 30px;">
+        <div class="container">
+            
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
+                <div>
+                    <div style="margin-bottom: 8px;">
+                        <span class="tag tag-status" id="detail-statut" style="position: relative; top: 0; left: 0;">-</span>
+                        <span class="tag tag-type" id="detail-type" style="position: relative; top: 0; left: 0; background: #e2e8f0; color: var(--text-color);">-</span>
+                    </div>
+                    <h1 id="detail-titre" style="color: var(--primary-blue-dark); font-size: 1.8rem; font-weight: 700;">Chargement...</h1>
+                    <p id="detail-localisation" style="color: var(--text-muted); font-size: 1rem; margin-top: 5px;">-</p>
+                </div>
+                <div>
+                    <div id="detail-prix" style="font-size: 2rem; font-weight: 800; color: var(--primary-blue);">-</div>
+                </div>
+            </div>
+
+            <!-- GALERIE PHOTOS -->
+            <!-- GALERIE / IMAGE PRINCIPALE -->
+          <div class="container" style="margin-top: 30px; margin-bottom: 30px;">
+           <div style="border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); max-height: 500px;">
+            <img id="img-main" src="" alt="Visuel du bien" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          </div>
+            <div class="detail-grid-box">
+                <div>
+                    <!-- SPÉCIFICATIONS -->
+                    <div style="background: white; padding: 25px; border-radius: var(--border-radius); border: 1px solid var(--border-color); margin-bottom: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 20px; text-align: center;">
+                        <div>
+                            <i class="fas fa-bed" style="font-size: 1.5rem; color: var(--primary-blue); margin-bottom: 8px;"></i>
+                            <div style="font-weight: 700;"><span id="detail-chambres">-</span> Chambres</div>
+                        </div>
+                        <div>
+                            <i class="fas fa-bath" style="font-size: 1.5rem; color: var(--primary-blue); margin-bottom: 8px;"></i>
+                            <div style="font-weight: 700;"><span id="detail-salles">-</span> SdB</div>
+                        </div>
+                        <div>
+                            <i class="fas fa-ruler-combined" style="font-size: 1.5rem; color: var(--primary-blue); margin-bottom: 8px;"></i>
+                            <div style="font-weight: 700;" id="detail-superficie">-</div>
+                        </div>
+                        <div>
+                            <i class="fas fa-car" style="font-size: 1.5rem; color: var(--primary-blue); margin-bottom: 8px;"></i>
+                            <div style="font-weight: 700;"><span id="detail-garages">-</span> Garages</div>
+                        </div>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <div style="background: white; padding: 30px; border-radius: var(--border-radius); border: 1px solid var(--border-color); margin-bottom: 30px;">
+                        <h2 style="color: var(--primary-blue); font-size: 1.3rem; margin-bottom: 15px; border-bottom: 2px solid var(--accent-yellow); padding-bottom: 8px; display: inline-block;">Description du bien</h2>
+                        <p id="detail-description" style="line-height: 1.7; color: var(--text-color);">-</p>
+                    </div>
+
+                    <!-- ÉQUIPEMENTS -->
+                    <div style="background: white; padding: 30px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                        <h2 style="color: var(--primary-blue); font-size: 1.3rem; margin-bottom: 20px; border-bottom: 2px solid var(--accent-yellow); padding-bottom: 8px; display: inline-block;">Équipements & Prestations</h2>
+                        <div id="detail-equipements" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;"></div>
+                    </div>
+                </div>
+
+                <!-- SIDEBAR CONTACT -->
+                <aside>
+                    <div style="background: white; padding: 25px; border-radius: var(--border-radius); border: 1px solid var(--border-color); position: sticky; top: 100px;">
+                        <h3 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.2rem;">Intéressé par ce bien ?</h3>
+                        <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                            <div class="form-group">
+                                <label for="nom">Nom complet</label>
+                                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Téléphone / WhatsApp</label>
+                                <input type="tel" id="telephone" name="telephone" placeholder="+225 07..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Envoyer une demande
+                            </button>
+                        </form>
+
+                        <hr style="margin: 20px 0; border: none; border-top: 1px solid var(--border-color);">
+
+                        <a id="btn-whatsapp-detail" href="#" target="_blank" class="btn" style="background: #25D366; color: white; width: 100%; text-align: center; font-weight: 600;">
+                            <i class="fab fa-whatsapp"></i> Écrire sur WhatsApp
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" style="background: var(--primary-blue-dark); color: white; padding: 50px 0 20px 0; margin-top: 60px;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;">
+            <div>
+                <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 15px;">
+                    <span style="color: white;">CONFORT</span> <span class="logo-yellow">HOME</span>
+                </a>
+                <p style="font-size: 0.88rem; opacity: 0.8;">Votre partenaire de confiance pour trouver le logement de vos rêves.</p>
+            </div>
+            <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--accent-yellow);">Contacts</h4>
+                <ul style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; opacity: 0.85;">
+                    <li><i class="fas fa-map-marker-alt"></i> M’badon, Immeuble Stratégique, Apt B3</li>
+                    <li><i class="fas fa-phone"></i> +225 07 09 08 52 68</li>
+                    <li><i class="fas fa-phone"></i> +225 05 86 58 36 26</li>
+                    <li><i class="fas fa-envelope"></i> Homeconfort2020@mail.com</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INCLUSION DES SCRIPTS JS -->
+    <script src="data.js"></script>
+    <script src="detail.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

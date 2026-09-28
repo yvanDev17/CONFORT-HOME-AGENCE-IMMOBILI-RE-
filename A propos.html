@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos de Nous | CONFORT HOME</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--  NAVIGATION (HEADER)-->
+    <header class="navbar">
+    <div class="container nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <span class="logo-blue">CONFORT</span> 
+            <span class="logo-yellow">HOME</span>
+        </a>
+
+        <!-- Menu de navigation (Liens + Sélecteur de langue) -->
+        <nav class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav-accueil">Accueil</a></li>
+                <li><a href="biens.html" data-i18n="nav-biens">Nos Biens</a></li>
+                <li><a href="A propos.html" data-i18n="nav-apropos">À Propos</a></li>
+                <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+
+            <div class="lang-container">
+                <button id="btn-fr" class="btn-lang active">FR</button>
+                <button id="btn-en" class="btn-lang">EN</button>
+            </div>
+        </nav>
+
+        <!-- Actions de droite (Téléphone + Bouton Hamburger) -->
+        <div class="nav-actions">
+            <a href="tel:+2250709085268" class="btn btn-phone" title="Appeler l'agence">
+                <i class="fas fa-phone-alt"></i>
+                <span class="phone-text">+225 07 09 08 52 68</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Menu Mobile">
+    <i class="fas fa-bars"></i>
+</button>
+        </div>
+    </div>
+</header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>À Propos de CONFORT HOME</h1>
+            <p>Découvrez notre histoire, notre vision et notre engagement pour un accompagnement immobilier sécurisé et responsable.</p>
+        </div>
+    </section>
+
+    <!-- SECTION PRESENTATION  -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: start;">
+                <div>
+                    <span class="tag tag-status" style="position: relative; top:0; left:0; margin-bottom: 15px; display: inline-block;">Agence Agréée par l'État</span>
+                    <h2 style="color: var(--primary-blue-dark); font-size: 1.8rem; margin-bottom: 20px; font-weight: 700;">6 Ans d'Excellence et de Rigueur Immobilère</h2>
+                    <p style="color: var(--text-color); line-height: 1.7; margin-bottom: 15px;">
+                        <strong>CONFORT HOME</strong> est une agence immobilière agréée par l’État exerçant depuis 6 ans en Côte d'Ivoire. Sous la direction de <strong>Mme TEBILE épouse GNANKOU PELAGIE</strong>, nous nous engageons à offrir à nos clients un accompagnement professionnel, responsable et dynamique tout en garantissant une entière confidentialité.
+                    </p>
+                    <p style="color: var(--text-color); line-height: 1.7; margin-bottom: 25px;">
+                        Notre périmètre d'intervention couvre <strong>tout Abidjan</strong>, ainsi que les villes de <strong>Grand-Bassam</strong>, <strong>Bingerville</strong> et <strong>Bouaké</strong>.
+                    </p>
+
+                    <div style="background: white; padding: 25px; border-radius: var(--border-radius); border: 1px solid var(--border-color); box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+                        <h3 style="color: var(--primary-blue); font-size: 1.2rem; margin-bottom: 15px;"><i class="fas fa-building-flag"></i> Informations Utiles & Siège</h3>
+                        <ul style="display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: var(--text-muted);">
+                            <li><strong>Responsable :</strong> Mme TEBILE épouse GNANKOU PELAGIE</li>
+                            <li><strong>Siège Social :</strong> Abidjan M’badon, non loin de l’Ambassade de Chine, Immeuble Stratégique, 2ème étage, Appartement B3</li>
+                            <li><strong>Horaires d'Ouverture :</strong> Du Lundi au Vendredi, de 08h00 à 17h00</li>
+                            <li><strong>Contacts Téléphoniques :</strong> +225 07 09 08 52 68 / +225 05 86 58 36 26 / +225 07 07 48 61 66</li>
+                            <li><strong>Adresse Email :</strong> Homeconfort2020@mail.com</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Siège CONFORT HOME" style="width: 100%; border-radius: var(--border-radius); box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 20px;">
+                    
+                    <div style="background: var(--primary-blue-dark); color: white; padding: 25px; border-radius: var(--border-radius);">
+                        <h4 style="color: var(--accent-yellow); font-size: 1.1rem; margin-bottom: 10px;"><i class="fas fa-bullseye"></i> Notre Ambition Majeure</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.9; line-height: 1.6;">
+                            Être au plus proche de nos locataires et propriétaires en digitalisant la gestion locative (quittances, relances et requêtes) afin de vous offrir des services rapides sans que vous ayez systématiquement à téléphoner.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: #f8fafc;">
+        <div class="container">
+            <div style="text-align: center; max-width: 650px; margin: 0 auto 40px auto;">
+                <h2 style="color: var(--primary-blue-dark); font-size: 1.8rem; font-weight: 700;">Nos Activités Principales</h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Un éventail complet de services pour répondre à tous vos besoins immobiliers.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                
+                <!-- Service 1 -->
+                <div class="service-card"  style="background: white; padding: 30px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                    <div style="width: 50px; height: 50px; background: rgba(10, 37, 64, 0.08); color: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 15px;">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 style="color: var(--primary-blue); font-size: 1.15rem; margin-bottom: 10px;">Gestion Locative & Suivi</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Prise en charge professionnelle de vos biens, gestion des loyers, relances automatisées et délivrance rapide des quittances.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card" style="background: white; padding: 30px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                    <div style="width: 50px; height: 50px; background: rgba(10, 37, 64, 0.08); color: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 15px;">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 style="color: var(--primary-blue); font-size: 1.15rem; margin-bottom: 10px;">Location Courte & Longue Durée</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Mise à disposition de maisons, appartements meublés et résidences de standing pour des séjours temporaires ou durables.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card" style="background: white; padding: 30px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                    <div style="width: 50px; height: 50px; background: rgba(10, 37, 64, 0.08); color: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 15px;">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 style="color: var(--primary-blue); font-size: 1.15rem; margin-bottom: 10px;">Achat & Vente (Maisons et Terrains)</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Accompagnement rigoureux pour la vente ou l'achat de biens avec vérification juridique des documents fonciers.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card" style="background: white; padding: 30px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                    <div style="width: 50px; height: 50px; background: rgba(10, 37, 64, 0.08); color: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 15px;">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 style="color: var(--primary-blue); font-size: 1.15rem; margin-bottom: 10px;">Conseil Immobilière & Syndic</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Conseils avisés en investissement, syndic de copropriété pour la gestion courante et l'entretien des immeubles.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card" style="background: white; padding: 30px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                    <div style="width: 50px; height: 50px; background: rgba(10, 37, 64, 0.08); color: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 15px;">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3 style="color: var(--primary-blue); font-size: 1.15rem; margin-bottom: 10px;">Tous Travaux de Bâtiment</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Exécution et suivi de travaux de rénovation, de réhabilitation et d'aménagement sur vos biens.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div style="background: var(--primary-blue-dark); color: white; padding: 40px; border-radius: var(--border-radius); text-align: center;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 15px; color: white;">Besoin d'un conseil ou d'une prestation immobilière ?</h2>
+                <p style="opacity: 0.9; max-width: 600px; margin: 0 auto 25px auto; font-size: 0.95rem;">Notre équipe est disponible à notre siège de M'badon du lundi au vendredi de 08h00 à 17h00.</p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+                    <a href="https://wa.me/2250709085268?text=Bonjour%20CONFORT%20HOME,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services." target="_blank" class="btn" style="background: #25D366; color: white;">
+                        <i class="fab fa-whatsapp"></i> Écrire sur WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOUTON FLOTTANT WHATSAPP -->
+    <a href="https://wa.me/2250709085268?text=Bonjour%20CONFORT%20HOME,%20j'ai%20une%20question." target="_blank" class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer id="contact" style="background: var(--primary-blue-dark); color: white; padding: 50px 0 20px 0;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;">
+            <div>
+                <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 15px;">
+                    <span style="color: white;">CONFORT</span> <span class="logo-yellow">HOME</span>
+                </a>
+                <p style="font-size: 0.88rem; opacity: 0.8;">Agence immobilière agréée par l'État. 6 ans d'expérience dans la gestion locative, la vente, le conseil et le syndic à Abidjan et à l'intérieur.</p>
+            </div>
+
+            <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--accent-yellow);">Navigation</h4>
+                <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; opacity: 0.85;">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="biens.html">Nos Biens</a></li>
+                    <li><a href="a-propos.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--accent-yellow);">Contacts</h4>
+                <ul style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; opacity: 0.85;">
+                    <li><i class="fas fa-map-marker-alt"></i> M’badon, Immeuble Stratégique, Apt B3</li>
+                    <li><i class="fas fa-phone"></i> +225 07 09 08 52 68</li>
+                    <li><i class="fas fa-phone"></i> +225 05 86 58 36 26</li>
+                    <li><i class="fas fa-envelope"></i> Homeconfort2020@mail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 0.8rem; opacity: 0.6;">
+            &copy; 2026 CONFORT HOME. Tous droits réservés.
+        </div>
+    </footer>
+
+    <!-- Fichier JS -->
+    <script src="main.js"></script>
+</body>
+</html>

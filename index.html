@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONFORT HOME | Agence Immobilière Agréée par l'État à Abidjan</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+
+    <!-- NAVIGATION (HEADER) -->
+    
+    <header class="navbar">
+    <div class="container nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <span class="logo-blue">CONFORT</span> 
+            <span class="logo-yellow">HOME</span>
+        </a>
+
+        <!-- Menu de navigation (Liens + Sélecteur de langue groupés pour mobile) -->
+        <nav class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav-accueil" class="active">Accueil</a></li>
+                <li><a href="biens.html" data-i18n="nav-biens">Nos Biens</a></li>
+                <li><a href="A propos.html" data-i18n="nav-apropos">À Propos</a></li>
+                <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+
+            <!-- Sélecteur de langue intégré proprement dans le menu mobile -->
+            <div class="lang-container">
+                <button id="btn-fr" class="btn-lang active">FR</button>
+                <button id="btn-en" class="btn-lang">EN</button>
+            </div>
+        </nav>
+
+        <!-- Actions de droite (Téléphone + Bouton Hamburger) -->
+        <div class="nav-actions">
+            <a href="tel:+2250709085268" class="btn btn-phone" title="Appeler l'agence">
+                <i class="fas fa-phone-alt"></i>
+                <span class="phone-text">+225 07 09 08 52 68</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Menu Mobile">
+    <i class="fas fa-bars"></i>
+</button>
+        </div>
+    </div>
+</header>
+    
+    <!-- HERO SECTION  -->
+    
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="badge-hero" data-i18n="hero-badge"><i class="fas fa-check-circle"></i> Agence Agréée par l'État — 6 ans d'expérience</span>
+            
+            <h1 data-i18n="hero-title">Trouvez le bien idéal ou confiez-nous votre gestion immobilière</h1>
+            <p data-i18n="hero-subtitle">Achat, Vente, Location courte/longue durée, Gestion locative & Syndic à Abidjan, Grand-Bassam, Bingerville et Bouaké.</p>
+
+            <!-- BARRE DE RECHERCHE -->
+            <div class="search-box">
+                <form action="biens.html" method="GET" class="search-form">
+                    <div class="form-group">
+                        <label for="search-type" data-i18n="search-type-label">Type de bien</label>
+                        <select id="search-type" name="type">
+                            <option value="" data-i18n="opt-all-types">Tous les types</option>
+                            <option value="appartement" data-i18n="opt-apt">Appartement</option>
+                            <option value="villa" data-i18n="opt-villa">Villa / Maison</option>
+                            <option value="terrain" data-i18n="opt-terrain">Terrain</option>
+                            <option value="bureau" data-i18n="opt-bureau">Bureau / Local commercial</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="search-status" data-i18n="search-status-label">Projet</label>
+                        <select id="search-status" name="status">
+                            <option value="" data-i18n="opt-buy-rent">Acheter ou Louer</option>
+                            <option value="vente" data-i18n="opt-sale">Achat (Vente)</option>
+                            <option value="location" data-i18n="opt-rent">Location</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="search-commune" data-i18n="search-zone-label">Zone / Ville</label>
+                        <select id="search-commune" name="commune">
+                            <option value="" data-i18n="opt-all-zones">Toutes les zones</option>
+                            <option value="Cocody">Cocody</option>
+                            <option value="Bingerville">Bingerville</option>
+                            <option value="Grand-Bassam">Grand-Bassam</option>
+                            <option value="Marcory">Marcory</option>
+                            <option value="Bouaké">Bouaké</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-search" data-i18n="btn-search">
+                        <i class="fas fa-search"></i> Rechercher
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- SERVICES  -->
+    
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; max-width: 650px; margin: 0 auto 40px auto;">
+                <h2 style="color: var(--primary-blue-dark); font-size: 1.8rem; font-weight: 750;" data-i18n="services-title">Nos Domaines d'Expertise</h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="services-subtitle">Une assistance responsable, dynamique et confidentielle pour tous vos projets immobiliers.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
+                <!-- Service 1 -->
+                <div style="background: white; padding: 25px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                    <div style="width: 55px; height: 55px; background: rgba(10, 37, 64, 0.08); color: var(--primary-blue); display: flex; align-items: center; justify-content: center; border-radius: 12px; margin-bottom: 15px; font-size: 1.2rem;">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 style="color: var(--primary-blue); font-size: 1.1rem; margin-bottom: 8px;" data-i18n="serv-1-title">Gestion Locative</h3>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;" data-i18n="serv-1-desc">Prise en charge complète de vos biens, recherche de locataires et sécurisation des loyers.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div style="background: white; padding: 25px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                    <div style="width: 55px; height: 55px; background: rgba(10, 37, 64, 0.08); color: var(--primary-blue); display: flex; align-items: center; justify-content: center; border-radius: 12px; margin-bottom: 15px; font-size: 1.2rem;">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 style="color: var(--primary-blue); font-size: 1.1rem; margin-bottom: 8px;" data-i18n="serv-2-title">Locations Courte & Longue Durée</h3>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;" data-i18n="serv-2-desc">Appartements meublés et résidences de standing pour vos séjours à Abidjan.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div style="background: white; padding: 25px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                    <div style="width: 55px; height: 55px; background: rgba(10, 37, 64, 0.08); color: var(--primary-blue); display: flex; align-items: center; justify-content: center; border-radius: 12px; margin-bottom: 15px; font-size: 1.2rem;">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 style="color: var(--primary-blue); font-size: 1.1rem; margin-bottom: 8px;" data-i18n="serv-3-title">Achat & Vente de Biens</h3>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;" data-i18n="serv-3-desc">Accompagnement sécurisé pour l'acquisition ou la vente de maisons, villas et terrains.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div style="background: white; padding: 25px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                    <div style="width: 55px; height: 55px; background: rgba(10, 37, 64, 0.08); color: var(--primary-blue); display: flex; align-items: center; justify-content: center; border-radius: 12px; margin-bottom: 15px; font-size: 1.2rem;">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 style="color: var(--primary-blue); font-size: 1.1rem; margin-bottom: 8px;" data-i18n="serv-4-title">Syndic & Travaux</h3>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;" data-i18n="serv-4-desc">Gestion de copropriété rigoureuse et suivi de tous vos projets de construction et rénovation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- ESPACE GESTION / QUITTANCE -->
+    
+    <section class="section" style="background: #f8fafc;">
+        <div class="container">
+            <div class="gestion-grid-box" style="background: var(--primary-blue); color: white; padding: 40px; border-radius: var(--border-radius);">
+                <!-- Colonne de gauche -->
+                <div>
+                    <h2 style="color: var(--accent-yellow); font-size: 1.8rem; margin-bottom: 15px;" data-i18n="gestion-title">Proche de nos locataires & propriétaires</h2>
+                    <p style="opacity: 0.9; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px;" data-i18n="gestion-desc">Gagnez du temps dans vos démarches. Effectuez vos demandes de quittance, signalez un besoin ou gérez vos biens en toute simplicité.</p>
+                    
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <a href="contact.html" class="btn btn-primary" data-i18n="btn-gestion">Faire gérer mon bien</a>
+                        <a href="https://wa.me/2250709085268" target="_blank" class="btn btn-whatsapp" style="background: #25d366; color: white; display: flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600;">
+                            <i class="fab fa-whatsapp"></i> <span data-i18n="btn-whatsapp">Assistance Directe</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Colonne de droite -->
+                <div style="background: rgba(255, 255, 255, 0.08); padding: 25px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.15);">
+                    <p style="font-size: 0.9rem; margin-bottom: 12px; line-height: 1.4;">
+                        <strong data-i18n="info-siege-label">Siège :</strong> <span data-i18n="info-siege-val">Abidjan M'badon, non loin de l'Ambassade de Chine, Immeuble Stratégique, 2e étage Apt B3</span>
+                    </p>
+                    <p style="font-size: 0.9rem; margin-bottom: 12px;">
+                        <strong data-i18n="info-horaires-label">Ouverture :</strong> <span data-i18n="info-horaires-val">Lundi/Vendredi de 08h00 à 17h00</span>
+                    </p>
+                    <p style="font-size: 0.9rem;">
+                        <strong data-i18n="info-phones-label">Téléphones :</strong><br>
+                        +225 07 09 08 52 68<br>
+                        +225 05 86 58 36 26
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- FOOTER -->
+    
+    <footer id="contact" style="background: var(--primary-blue-dark); color: white; padding: 50px 0 20px 0;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px;">
+            <div>
+                <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 15px;">
+                    <span style="color: white;">CONFORT</span> <span class="logo-yellow">HOME</span>
+                </a>
+                <p style="font-size: 0.88rem; opacity: 0.8;" data-i18n="footer-desc">Agence immobilière agréée par l'État. 6 ans d'accompagnement.</p>
+            </div>
+
+            <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--accent-yellow);" data-i18n="footer-nav">Navigation</h4>
+                <ul style="display: flex; flex-direction: column; gap: 8px; list-style: none; padding: 0; font-size: 0.9rem; opacity: 0.85;">
+                    <li><a href="index.html" data-i18n="nav-accueil" style="color: white; text-decoration: none;">Accueil</a></li>
+                    <li><a href="biens.html" data-i18n="nav-biens" style="color: white; text-decoration: none;">Nos Biens</a></li>
+                    <li><a href="A propos.html" data-i18n="nav-apropos" style="color: white; text-decoration: none;">À Propos</a></li>
+                    <li><a href="contact.html" data-i18n="nav-contact" style="color: white; text-decoration: none;">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--accent-yellow);" data-i18n="footer-contacts">Contacts</h4>
+                <p style="font-size: 0.9rem; opacity: 0.85; margin-bottom: 10px;">
+                    <strong>M'badon, Immeuble Stratégique, Apt B3</strong>
+                </p>
+                <p style="font-size: 0.9rem; opacity: 0.85;">
+                    +225 07 09 08 52 68 / +225 05 86 58 36 26
+                </p>
+            </div>
+        </div>
+
+        <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; font-size: 0.85rem; opacity: 0.7;">
+            <p data-i18n="footer-rights">Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Script de traduction -->
+    <script src="translations.js"></script>
+    
+    <!-- Script principal du site (pour le menu mobile, animations, etc.) -->
+    <script src="main.js"></script>
+</body>
+</html>

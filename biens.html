@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Biens | CONFORT HOME</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--  NAVIGATION (HEADER)-->
+    <header class="navbar">
+    <div class="container nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <span class="logo-blue">CONFORT</span> 
+            <span class="logo-yellow">HOME</span>
+        </a>
+
+        <!-- Menu de navigation (Liens + Sélecteur de langue) -->
+        <nav class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav-accueil">Accueil</a></li>
+                <li><a href="biens.html" data-i18n="nav-biens">Nos Biens</a></li>
+                <li><a href="A propos.html" data-i18n="nav-apropos">À Propos</a></li>
+                <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+
+            <div class="lang-container">
+                <button id="btn-fr" class="btn-lang active">FR</button>
+                <button id="btn-en" class="btn-lang">EN</button>
+            </div>
+        </nav>
+
+        <!-- Actions de droite (Téléphone + Bouton Hamburger) -->
+        <div class="nav-actions">
+            <a href="tel:+2250709085268" class="btn btn-phone" title="Appeler l'agence">
+                <i class="fas fa-phone-alt"></i>
+                <span class="phone-text">+225 07 09 08 52 68</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Menu Mobile">
+    <i class="fas fa-bars"></i>
+</button>
+        </div>
+    </div>
+</header>
+
+    
+    <section class="page-banner">
+        <div class="container">
+            <h1>Catalogue des Biens</h1>
+            <p>Explorez notre sélection complète de propriétés disponibles à l'achat et à la location.</p>
+        </div>
+    </section>
+
+    <!--SECTION CATALOGUE -->
+    <section class="section" style="padding-top: 30px;">
+        <div class="container">
+            <div class="catalog-topbar">
+                <button class="btn btn-outline mobile-filter-toggle">
+                    <i class="fas fa-filter"></i> Filtrer la recherche
+                </button>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Affichage de <strong>6 biens</strong> disponibles</p>
+            </div>
+
+            <div class="catalog-layout">
+                <!-- SIDEBAR FILTRES -->
+                <aside class="filter-sidebar">
+                    <div class="filter-header">
+                        <h3 style="color: var(--primary-blue);">Filtres</h3>
+                        <button class="close-filter-btn" aria-label="Fermer filtres">&times;</button>
+                    </div>
+
+                    <form action="biens.html" method="GET">
+                        <div class="filter-group form-group">
+                            <label>Type de transaction</label>
+                            <select name="transaction">
+                                <option value="">Tous</option>
+                                <option value="vente">À Vendre</option>
+                                <option value="location">À Louer</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group form-group">
+                            <label>Type de bien</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="type" value="villa"> Villa</label>
+                                <label><input type="checkbox" name="type" value="appartement"> Appartement</label>
+                                <label><input type="checkbox" name="type" value="duplex"> Duplex</label>
+                                <label><input type="checkbox" name="type" value="terrain"> Terrain</label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group form-group">
+                            <label>Commune / Localisation</label>
+                            <select name="location">
+                                <option value="">Toutes les communes</option>
+                                <option value="cocody">Cocody</option>
+                                <option value="marcory">Marcory</option>
+                                <option value="bingerville">Bingerville</option>
+                                <option value="assinie">Assinie</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group form-group">
+                            <label for="budget-max">Budget maximum (FCFA)</label>
+                            <input type="number" id="budget-max" name="budget_max" placeholder="Ex: 200 000 000">
+                        </div>
+
+                        <div class="filter-group form-group">
+                            <label for="chambres">Nombre de chambres min.</label>
+                            <select id="chambres" name="chambres">
+                                <option value="">Indifférent</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                            Appliquer les filtres
+                        </button>
+                    </form>
+                </aside>
+
+                <!-- GRILLE DES BIENS -->
+                <div class="grid-properties">
+                    <!-- Carte 1 -->
+                    <article class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Villa Duplex Cocody">
+                            <span class="tag tag-status">À Vendre</span>
+                            <span class="tag tag-type">Villa</span>
+                        </div>
+                        <div class="property-body">
+                            <div class="property-price">180 000 000 <span>FCFA</span></div>
+                            <h3 class="property-title">Villa Duplex 5 Pièces</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cocody Riviera 3, Abidjan</p>
+                            <div class="property-specs">
+                                <span><i class="fas fa-bed"></i> 4 Ch.</span>
+                                <span><i class="fas fa-bath"></i> 4 SdB</span>
+                                <span><i class="fas fa-ruler-combined"></i> 350 m²</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="detail.html?id=CH-001" class="btn btn-primary"style="padding: 8px 16px; font-size: 0.85rem;">Voir Détails</a>
+                                <a href="https://wa.me/2250000000000?text=Bonjour,%20je%20suis%20intéressé%20par%20la%20Villa%20Duplex%20Cocody" target="_blank" class="btn-whatsapp-sm">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Carte 2 -->
+                    <article class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="Appartement Marcory">
+                            <span class="tag tag-status" style="background: var(--accent-yellow); color:#000;">À Louer</span>
+                            <span class="tag tag-type">Appartement</span>
+                        </div>
+                        <div class="property-body">
+                            <div class="property-price">650 000 <span>FCFA/mois</span></div>
+                            <h3 class="property-title">Appartement Haut Standing 3P</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Marcory Zone 4, Abidjan</p>
+                            <div class="property-specs">
+                                <span><i class="fas fa-bed"></i> 2 Ch.</span>
+                                <span><i class="fas fa-bath"></i> 2 SdB</span>
+                                <span><i class="fas fa-ruler-combined"></i> 110 m²</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="detail.html?id=CH-002" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Voir Détails</a>
+                                <a href="https://wa.me/2250000000000?text=Bonjour,%20je%20suis%20intéressé%20par%20l'appartement%20Marcory" target="_blank" class="btn-whatsapp-sm">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Carte 3 -->
+                    <article class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Villa Bingerville">
+                            <span class="tag tag-status">À Vendre</span>
+                            <span class="tag tag-type">Villa</span>
+                        </div>
+                        <div class="property-body">
+                            <div class="property-price">250 000 000 <span>FCFA</span></div>
+                            <h3 class="property-title">Villa de Luxe avec Piscine</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Bingerville, Abidjan</p>
+                            <div class="property-specs">
+                                <span><i class="fas fa-bed"></i> 5 Ch.</span>
+                                <span><i class="fas fa-bath"></i> 5 SdB</span>
+                                <span><i class="fas fa-ruler-combined"></i> 500 m²</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="detail.html?id=CH-003" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Voir Détails</a>
+                                <a href="https://wa.me/2250000000000?text=Bonjour,%20je%20suis%20intéressé%20par%20la%20Villa%20Bingerville" target="_blank" class="btn-whatsapp-sm">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Carte 4 -->
+                    <article class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Maison Basse Riviera">
+                            <span class="tag tag-status">À Vendre</span>
+                            <span class="tag tag-type">Maison</span>
+                        </div>
+                        <div class="property-body">
+                            <div class="property-price">120 000 000 <span>FCFA</span></div>
+                            <h3 class="property-title">Maison Basse 4 Pièces</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cocody Faya, Abidjan</p>
+                            <div class="property-specs">
+                                <span><i class="fas fa-bed"></i> 3 Ch.</span>
+                                <span><i class="fas fa-bath"></i> 3 SdB</span>
+                                <span><i class="fas fa-ruler-combined"></i> 250 m²</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="detail.html?id=CH-004" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Voir Détails</a>
+                                <a href="https://wa.me/2250000000000?text=Bonjour,%20je%20suis%20intéressé%20par%20la%20maison%20Faya" target="_blank" class="btn-whatsapp-sm">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Carte 5 -->
+                    <article class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80" alt="Studio Meublé">
+                            <span class="tag tag-status" style="background: var(--accent-yellow); color:#000;">À Louer</span>
+                            <span class="tag tag-type">Studio</span>
+                        </div>
+                        <div class="property-body">
+                            <div class="property-price">350 000 <span>FCFA/mois</span></div>
+                            <h3 class="property-title">Studio Meublé Moderne</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cocody Angré, Abidjan</p>
+                            <div class="property-specs">
+                                <span><i class="fas fa-bed"></i> 1 Ch.</span>
+                                <span><i class="fas fa-bath"></i> 1 SdB</span>
+                                <span><i class="fas fa-ruler-combined"></i> 55 m²</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="detail.html?id=CH-005" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Voir Détails</a>
+                                <a href="https://wa.me/2250000000000?text=Bonjour,%20je%20suis%20intéressé%20par%20le%20studio%20Angre" target="_blank" class="btn-whatsapp-sm">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Carte 6 -->
+                    <article class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Terrain Viabilisé">
+                            <span class="tag tag-status">À Vendre</span>
+                            <span class="tag tag-type">Terrain</span>
+                        </div>
+                        <div class="property-body">
+                            <div class="property-price">45 000 000 <span>FCFA</span></div>
+                            <h3 class="property-title">Terrain Viabilisé 600 m²</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Bingerville Extension</p>
+                            <div class="property-specs">
+                                <span><i class="fas fa-file-contract"></i> ACD</span>
+                                <span><i class="fas fa-map"></i> Lot qualifié</span>
+                                <span><i class="fas fa-ruler-combined"></i> 600 m²</span>
+                            </div>
+                            <div class="property-actions">
+                                <a href="detail.html?id=CH-006" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Voir Détails</a>
+                                <a href="https://wa.me/2250000000000?text=Bonjour,%20je%20suis%20intéressé%20par%20le%20terrain%20Bingerville" target="_blank" class="btn-whatsapp-sm">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOUTON FLOTTANT WHATSAPP  -->
+    <a href="https://wa.me/2250000000000?text=Bonjour%20CONFORT%20HOME,%20j'aimerais%20avoir%20plus%20d'informations." target="_blank" class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer id="contact" style="background: var(--primary-blue-dark); color: white; padding: 50px 0 20px 0;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;">
+            <div>
+                <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 15px;">
+                    <span style="color: white;">CONFORT</span> <span class="logo-yellow">HOME</span>
+                </a>
+                <p style="font-size: 0.88rem; opacity: 0.8;">Votre partenaire de confiance pour trouver le logement de vos rêves ou investir dans l'immobilier en toute sérénité.</p>
+            </div>
+
+            <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--accent-yellow);">Navigation</h4>
+                <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; opacity: 0.85;">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="biens.html">Nos Biens</a></li>
+                    <li><a href="index.html#a-propos">À Propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--accent-yellow);">Contacts</h4>
+                <ul style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; opacity: 0.85;">
+                    <li><i class="fas fa-map-marker-alt"></i> M’badon, Immeuble Stratégique, Apt B3</li>
+                    <li><i class="fas fa-phone"></i> +225 07 09 08 52 68</li>
+                    <li><i class="fas fa-phone"></i> +225 05 86 58 36 26</li>
+                    <li><i class="fas fa-envelope"></i> Homeconfort2020@mail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 0.8rem; opacity: 0.6;">
+            &copy; 2026 CONFORT HOME. Tous droits réservés.
+        </div>
+    </footer>
+
+    <!-- Fichier JS -->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,811 @@
+/*CHARTE GRAPHIQUE & VARIABLES (CONFORT HOME)*/
+:root {
+    /* Couleurs principales */
+    --primary-blue: #0F4C81;         /* Bleu Institutionnel */
+    --primary-blue-dark: #0A3256;    /* Bleu Foncé (Footer / Bannières) */
+    --accent-yellow: #FFC107;        /* Jaune Dynamique */
+    --accent-yellow-hover: #E0A800;
+
+    /* Couleurs neutres */
+    --text-dark: #1F2937;
+    --text-muted: #6B7280;
+    --bg-light: #F9FAFB;
+    --bg-white: #FFFFFF;
+    --border-color: #E5E7EB;
+
+    /* Formes & Ombres */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    /* Transitions */
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 
+ outils (Boutons, Badges, Tags)
+    */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+.logo-blue { color: var(--primary-blue); }
+.logo-yellow { color: var(--accent-yellow); }
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--bg-white);
+}
+.btn-primary:hover {
+    background-color: var(--primary-blue-dark);
+}
+
+.btn-yellow {
+    background-color: var(--accent-yellow);
+    color: #000;
+}
+.btn-yellow:hover {
+    background-color: var(--accent-yellow-hover);
+}
+
+.btn-outline {
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+    background: transparent;
+}
+.btn-outline:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.btn-phone {
+    background-color: var(--bg-light);
+    color: var(--primary-blue);
+    font-size: 0.85rem;
+}
+
+.btn-whatsapp-sm {
+    background-color: #25D366;
+    color: white;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    border-radius: var(--radius-sm);
+}
+
+.badge-hero {
+    background-color: var(--accent-yellow);
+    color: #000;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.tag {
+    position: absolute;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+.tag-status { top: 12px; left: 12px; background: var(--primary-blue); color: white; }
+.tag-type { top: 12px; right: 12px; background: rgba(0, 0, 0, 0.65); color: white; }
+
+/*NAVIGATION (HEADER) */
+.navbar {
+    background: white;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+/* HERO SECTION & MOTEUR DE RECHERCHE*/
+.hero {
+    background: linear-gradient(rgba(15, 76, 129, 0.88), rgba(10, 50, 86, 0.92)), 
+                url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 70px 0 110px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin: 15px 0 10px 0;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.search-box {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 25px;
+    max-width: 950px;
+    margin: 35px auto -110px auto;
+    box-shadow: var(--shadow-md);
+    color: var(--text-dark);
+}
+
+.search-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 8px 20px;
+    border: none;
+    background: var(--bg-light);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.tab-btn.active {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.search-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    align-items: end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-muted);
+}
+
+.form-group select, 
+.form-group input {
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    outline: none;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.btn-search {
+    background-color: var(--accent-yellow);
+    color: #000;
+    width: 100%;
+    font-weight: 700;
+}
+.btn-search:hover { background-color: var(--accent-yellow-hover); }
+
+/*  SECTIONS DE CONTENU & GRILLE DE BIENS*/
+.section {
+    padding: 140px 0 60px 0;
+}
+.bg-light { background-color: var(--bg-light); }
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 35px;
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+}
+
+.grid-properties {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 25px;
+}
+
+.property-card {
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.property-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.property-image {
+    position: relative;
+    height: 210px;
+}
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-body { padding: 20px; }
+.property-price { font-size: 1.3rem; font-weight: 800; color: var(--primary-blue); }
+.property-price span { font-size: 0.85rem; color: var(--text-muted); font-weight: 400; }
+.property-title { font-size: 1.1rem; margin: 6px 0; font-weight: 700; }
+.property-location { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 15px; }
+
+.property-specs {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding: 12px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.property-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* PAGE CATALOGUE (`biens.html`) */
+.page-banner {
+    background: var(--primary-blue-dark);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+.page-banner h1 { font-size: 2rem; margin-bottom: 6px; }
+
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    align-items: start;
+    padding-top: 40px;
+}
+
+.filter-sidebar {
+    background: white;
+    padding: 22px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 90px;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-filter-btn {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-group { margin-bottom: 16px; }
+.checkbox-group { display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; }
+
+.catalog-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.mobile-filter-toggle { display: none; }
+
+/*  PAGE FICHE DÉTAIL (`detail.html`) */
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.detail-price { text-align: right; }
+.detail-price .price-value { font-size: 1.8rem; font-weight: 800; color: var(--primary-blue); }
+
+.gallery-container { margin-bottom: 30px; }
+.gallery-main { width: 100%; height: 420px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 12px; }
+.gallery-main img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.thumb {
+    height: 90px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+.thumb.active, .thumb:hover { opacity: 1; border: 2px solid var(--primary-blue); }
+
+.detail-grid { display: grid; grid-template-columns: 1fr 340px; gap: 30px; }
+.detail-block { background: white; padding: 25px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 25px; }
+.detail-block h2 { font-size: 1.2rem; margin-bottom: 15px; color: var(--primary-blue); }
+
+.specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+.spec-item { background: var(--bg-light); padding: 12px; border-radius: var(--radius-sm); font-size: 0.85rem; }
+
+.btn-whatsapp-lg {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    background: #25D366; color: white; padding: 14px; border-radius: var(--radius-sm);
+    text-decoration: none; font-weight: 700; width: 100%; margin: 15px 0;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    z-index: 1000;
+}
+
+/*  RESPONSIVE DESIGN  */
+@media (max-width: 992px) {
+    .catalog-layout { grid-template-columns: 1fr; }
+    
+    .filter-sidebar {
+        position: fixed; top: 0; left: -100%; width: 85%; max-width: 340px; height: 100vh;
+        z-index: 2000; overflow-y: auto; transition: var(--transition);
+    }
+    .filter-sidebar.open { left: 0; }
+    .close-filter-btn { display: block; }
+    .mobile-filter-toggle { display: inline-flex; }
+
+    .detail-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; left: 0; width: 100%;
+        background: white; padding: 20px;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    }
+    .nav-menu.active { display: flex; }
+    .mobile-toggle { display: block; }
+
+    .hero h1 { font-size: 1.8rem; }
+    .search-box { margin-bottom: 0; }
+    .search-form { grid-template-columns: 1fr; }
+    
+    .section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .section { padding: 50px 0 40px 0; }
+}
+/* Transition fluide pour toute la carte */
+.property-card {
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Élévation au survol */
+.property-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Zoom élégant sur l'image de la carte */
+.property-card img {
+    transition: transform 0.5s ease;
+}
+
+.property-card:hover img {
+    transform: scale(1.06);
+}
+@keyframes pulse-whatsapp {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+#property-whatsapp, .btn-whatsapp {
+    animation: pulse-whatsapp 2.5s infinite;
+}
+.navbar {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+/* Effet de survol fluide sur les cartes de services dans À Propos */
+.about-service-card, .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.about-service-card:hover, .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-blue, #0056b3);
+}
+
+/* Animation subtile sur l'image d'illustration de la section À Propos */
+.about-image img, .about-img {
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img, .about-img:hover {
+    transform: scale(1.03);
+}
+.service-card {
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border-radius: 8px;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+/* --- HEADER & NAVBAR RESPONSIVE --- */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+.logo-blue { color: #0b2545; }
+.logo-yellow { color: #e4b363; }
+
+/* Menu principal (Desktop) */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0b2545;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #e4b363;
+}
+
+/* Sélecteur de langue */
+.lang-container {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-lang {
+    background: transparent;
+    border: 1px solid #ccc;
+    padding: 3px 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #0b2545;
+    font-weight: 600;
+}
+
+.btn-lang.active {
+    background-color: #0b2545;
+    color: #fff;
+    border-color: #0b2545;
+}
+
+/* Actions de droite (Téléphone + Hamburger) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Bouton Téléphone : EMPÊCHE LE NUMÉRO DE SE COUPER */
+.btn-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #0b2545;
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap; /* EMPÊCHE LES CHIFFRES DE SAUTER À LA LIGNE */
+}
+
+.btn-phone i {
+    color: #e4b363;
+}
+
+/* Bouton Hamburger (Caché sur Desktop) */
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: #0b2545;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+/* --- MEDIA QUERIES POUR ANDROID / MOBILES (< 992px) --- */
+@media screen and (max-width: 992px) {
+    .mobile-toggle {
+        display: block; /* Affiche le bouton hamburger */
+    }
+
+    /* Sur mobile, on cache le numéro complet pour ne garder que l'icône cliquable (plus propre) 
+       OU on réduit sa taille. Faisons en sorte de garder l'icône propre pour gagner de la place : */
+    .phone-text {
+        display: none; /* Cache le texte du numéro sur petit écran pour garder juste l'icône téléphone */
+    }
+
+    .btn-phone {
+        padding: 8px 10px;
+        border-radius: 50%; /* Transforme le bouton téléphone en rond compact avec l'icône */
+    }
+
+    /* Menu mobile masqué par défaut */
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        border-top: 1px solid #eee;
+    }
+
+    /* Quand JavaScript ajoute la classe .active au clic sur le hamburger */
+    .nav-menu.active {
+        display: flex !important;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        display: block;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #f0f0f0;
+        width: 100%;
+    }
+
+    .lang-container {
+        width: 100%;
+        justify-content: flex-start;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+    }
+}
+/* --- Grille de la section Gestion / Quittance --- */
+.gestion-grid-box {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Sur mobile (écrans de moins de 768px) : passage en colonne unique */
+@media screen and (max-width: 768px) {
+    .gestion-grid-box {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px;
+        padding: 20px !important; /* Réduit un peu le padding sur mobile pour gagner de la place */
+    }
+}
+.btn-lang {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    color: #0b2545;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Style du bouton lorsqu'il est actif (sélectionné) */
+.btn-lang.active {
+    background-color: #0b2545 !important;
+    color: #ffffff !important;
+    border-color: #0b2545 !important;
+}
+@media (max-width: 992px) {
+    .filter-sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Caché hors de l'écran par défaut */
+        width: 80%;
+        max-width: 320px;
+        height: 100%;
+        background: #ffffff;
+        z-index: 1000;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+        overflow-y: auto;
+    }
+
+    /* Quand on clique sur le bouton, il glisse et s'affiche */
+    .filter-sidebar.active {
+        left: 0;
+    }
+}
+/* --- Grille de la page de détail --- */
+.detail-grid-box {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+/* Sur téléphone : empile les éléments les uns sous les autres */
+@media screen and (max-width: 768px) {
+    .detail-grid-box {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+}
